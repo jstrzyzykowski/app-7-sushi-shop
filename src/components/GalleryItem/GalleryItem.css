@@ -1,0 +1,120 @@
+.galleryItem {
+  background-color: whitesmoke;
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.galleryItem:hover .galleryItem__overlay {
+  display: flex;
+}
+
+.galleryItem__overlay {
+  height: calc(100% - 4rem);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: slideHorizontal .2s ease-out both;
+}
+
+.galleryItem__overlay-details-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.4rem;
+  width: 4.4rem;
+  border-radius: 5rem;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-20%, 20%);
+  color: black;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.6);
+  background-color: whitesmoke;
+}
+
+.galleryItem__overlay-footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 1rem 2rem;
+}
+
+.galleryItem__overlay-name {
+  font-size: 1.4rem;
+}
+
+.galleryItem__overlay-desc {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.galleryItem__inCartStatus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #212121;
+  border-bottom: 5px solid tomato;
+  border-right: 5px solid tomato;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.galleryItem__status-number {
+  margin-right: 1rem;
+}
+
+.galleryItem__inCartStatus i {
+  font-size: 1.8rem;
+}
+
+.gallery__image-wrapper {
+  height: 20rem;
+}
+
+.galleryItem__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+}
+
+.galleryItem__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: teal;
+  padding: 0 1rem;
+  height: 4rem;
+}
+
+.galleryItem__addToCart-btn {
+  border: none;
+  padding: 0 2rem;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* ------------------- */
+/*      Animations     */
+/* ------------------- */
+
+@keyframes slideHorizontal {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 0;
+  }
+}

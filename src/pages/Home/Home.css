@@ -1,0 +1,29 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: cyan;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.gallery__menu {
+  list-style: none;
+  display: flex;
+  height: 12rem;
+  background-color: cornflowerblue;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery__item {
+  background-color: crimson;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.gallery__item.active {
+  font-weight: bold;
+}

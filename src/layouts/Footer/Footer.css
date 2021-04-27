@@ -1,0 +1,70 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------*/
+/*        Boxes        */
+/* ------------------- */
+
+.footer__boxes {
+  background-color: gray;
+  height: 12rem;
+}
+
+.footer__boxes-container {
+  display: flex;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: 100%;
+}
+
+.footer__box {
+  width: calc(100% - 66%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.footer__box i {
+  font-size: 3.8rem;
+  transform: scaleX(-1);
+  margin-right: 2rem;
+  padding-top: 2.8rem;
+}
+
+.footer__text-name {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.footer__text-desc {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+/* --------------------*/
+/*      Copyright      */
+/* ------------------- */
+
+.footer__copy-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  background-color: whitesmoke;
+}
+
+.footer__copy-text {
+  flex-grow: 1;
+  font-size: 1.4rem;
+}
+
+.footer__payments i {
+  font-size: 3.6rem;
+  margin-right: 1rem;
+}
