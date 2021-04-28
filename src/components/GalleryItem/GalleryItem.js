@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 import {addToCart} from '../../actions/cartActions';
 
@@ -8,13 +8,29 @@ import './GalleryItem.css';
 
 const GalleryItem = ({item}) => {
   const dispatch = useDispatch();
+  const cartItems = useSelector((store) => store.cart.data);
 
+  const checkIsAlreadyInCart = () => {
+    const result = cartItems.find((obj) => {
+      return obj.id === item.id
+    })
 
+    if(result === undefined) return {
+      isInCart: false,
+      quantity: 0,
+    }
+    return {
+      isInCart: true,
+      quantity: result.quantity,
+    }
+  }
 
   const handleAddToCartClick = () => {
-    console.log('ITEM:', item);
-    dispatch(addToCart(item));
+    const result = checkIsAlreadyInCart();
+    dispatch(addToCart(item, result.isInCart));
   }
+
+  const itemNumber = checkIsAlreadyInCart().quantity;
 
   return (
     <li className='galleryItem'>
@@ -28,7 +44,7 @@ const GalleryItem = ({item}) => {
         </div>
       </div>
       <div className="galleryItem__inCartStatus">
-        <p className='galleryItem__status-number'>999</p>
+        <p className='galleryItem__status-number'>{itemNumber}</p>
         <i className="fas fa-cart-arrow-down"></i>
       </div>
       <div className="gallery__image-wrapper">

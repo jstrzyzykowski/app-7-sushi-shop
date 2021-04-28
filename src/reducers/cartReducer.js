@@ -8,6 +8,16 @@ const cartReducer = (state = initialState, action) => {
 
   switch (action.type) {
     case ADD_TO_CART:
+      if(action.payload.isAlreadyInCart) return {
+        ...state,
+        data: state.data.map((itemInCart) => {
+          if(itemInCart.id === action.payload.id) return {
+            ...itemInCart,
+            quantity: itemInCart.quantity + 1,
+          }
+          return itemInCart;
+        })
+      }
       return {
         ...state,
         data: [...state.data, { 

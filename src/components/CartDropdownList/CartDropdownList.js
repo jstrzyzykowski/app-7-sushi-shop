@@ -17,13 +17,30 @@ const CartDropdownList = ({dropdownToggler}) => {
 
   const items = itemsInCart.map((item) => <CartDropdownItem key={item.id} item={item}/>);
 
+  const getTotalInfo = () => {
+    let totalItems = 0;
+    let totalPrice = 0;
+
+    for (let i = 0; i < itemsInCart.length; i++) {
+      totalItems += itemsInCart[i].quantity;
+      totalPrice += (itemsInCart[i].quantity * itemsInCart[i].price);
+    }
+
+    return {
+      totalItems,
+      totalPrice,
+    }
+  }
+
+  const totalInfo = getTotalInfo();
+
   return (
     <>
-      <ul>
+      <ul className='cartDropdownList__list'>
         {items}
       </ul>
-      <p className='cartDropdown__total'>Total: 0 X 0$</p>
-      <button className='cartDropdown__checkout-btn' onClick={handleClick}>Checkout</button>
+      <p className='cartDropdownList__total'>Total: {totalInfo.totalItems} | ${totalInfo.totalPrice.toFixed(2)}</p>
+      <button className='cartDropdownList__checkout-btn' onClick={handleClick}>Checkout</button>
     </>
   );
 }
