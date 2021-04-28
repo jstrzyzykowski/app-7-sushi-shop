@@ -1,9 +1,21 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {useDispatch} from 'react-redux';
+
+import {addToCart} from '../../actions/cartActions';
 
 import './GalleryItem.css';
 
 const GalleryItem = ({item}) => {
+  const dispatch = useDispatch();
+
+
+
+  const handleAddToCartClick = () => {
+    console.log('ITEM:', item);
+    dispatch(addToCart(item));
+  }
+
   return (
     <li className='galleryItem'>
       <div className="galleryItem__overlay">
@@ -24,7 +36,7 @@ const GalleryItem = ({item}) => {
       </div>
       <div className='galleryItem__footer'>
         <p className='galleryItem__price'>${item.price}</p>
-        <button className='galleryItem__addToCart-btn'>+ Cart</button>
+        <button className='galleryItem__addToCart-btn' onClick={handleAddToCartClick}>+ Cart</button>
       </div>
     </li>
   );

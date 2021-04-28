@@ -1,19 +1,25 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+import {useSelector} from 'react-redux';
+
+import CartDropdownList from '../CartDropdownList/CartDropdownList';
+
 import './CartDropdown.css';
 
-const CartDropdown = ({callback}) => {
-  const history = useHistory();
-
-  const handleClick = () => {
-    callback();
-    history.push('/shop/checkout/checkorders');
-  }
+const CartDropdown = ({callback}) => {  
+  const itemsInCart = useSelector((store) => store.cart.data);
+  
+  const dropdownContent = itemsInCart.length > 0 
+  ? <CartDropdownList dropdownToggler={callback}/> 
+  : (
+    <>
+      <p>Your shopping bag is empty.</p>
+      <p>Start shopping.</p>
+    </>
+  );
 
   return (
     <div className="cartDropdown">
-      <p className='cartDropdown__total'>Total: <span>0</span> X <span>0$</span></p>
-      <button className='cartDropdown__checkout-btn' onClick={handleClick}>Checkout</button>
+      {dropdownContent}
     </div>
   );
 }
