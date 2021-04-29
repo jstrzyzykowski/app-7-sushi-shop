@@ -1,7 +1,16 @@
 import React from 'react';
+import {useDispatch} from 'react-redux';
+import {removeFromCart} from '../../actions/cartActions';
+
 import './CartDropdownItem.css';
 
 const CartDropdownItem = ({item}) => {
+  const dispatch = useDispatch();
+
+  const handleRemove = () => {
+    dispatch(removeFromCart(item, item.quantity));
+  }
+
   return (
     <div className="cartDropdownItem">
       <div className="cartDropdownItem__image-wrapper">
@@ -12,7 +21,7 @@ const CartDropdownItem = ({item}) => {
         <p className='cartDropdownItem__desc'>{item.quantity} x ${item.price}</p>
       </div>
       <div className="cartDropdownItem__remove-wrapper">
-        <i className="fas fa-trash-alt"></i>
+        <i className="fas fa-trash-alt" onClick={handleRemove}></i>
       </div>
     </div>
   );

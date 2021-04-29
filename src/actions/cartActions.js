@@ -14,10 +14,14 @@ export const addToCart = ({id, name, category, price, src}, isAlreadyInCart, qua
   }
 });
 
-export const removeFromCart = (item, quantity = 1) => ({
+export const removeFromCart = ({id, name, category, price, src}, quantity = 1) => ({
   type: REMOVE_FROM_CART,
   payload: {
-    item,
+    id,
+    name,
+    category,
+    price,
+    src,
     quantity
   }
 })

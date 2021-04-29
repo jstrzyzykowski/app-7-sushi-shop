@@ -30,25 +30,27 @@ const cartReducer = (state = initialState, action) => {
         }],
       }
     case REMOVE_FROM_CART:
-      return state;
+      const item = state.data.filter((itemInCart) => {
+        if(itemInCart.id === action.payload.id) return itemInCart;
+      })
+      if((item[0].quantity - action.payload.quantity) === 0) return {
+        ...state,
+        data: state.data.filter((itemInCart) => {
+          if(itemInCart.id !== action.payload.id) return itemInCart;
+        }),
+      }
+      return {
+        ...state,
+        data: state.data.map((itemInCart) => {
+          if(itemInCart.id === action.payload.id) {
+            itemInCart.quantity = itemInCart.quantity - action.payload.quantity;
+          }
+          return itemInCart;
+        }),
+      };
     default:
       return state;
   }
 }
 
 export default cartReducer;
-
-// Question: Is product searching in database of all products when I am scanning it?
-// Problem: Performance while going through whole database becouse of one product.
-// const createCartItem = ({itemId, ItemQuantity}) => {
-//   const item = items.filter((item) => {
-//     if(item.id === itemId) return item;
-//   })
-
-//   return {
-//     id: item.id,
-//     name: item.name,
-//     price: item.price,
-//     quantity: ItemQuantity
-//   }
-// }

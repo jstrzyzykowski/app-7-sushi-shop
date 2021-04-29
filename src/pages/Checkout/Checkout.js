@@ -25,6 +25,23 @@ const Checkout = () => {
   ? cartItemComponents 
   : (<p className='checkout__content-text-empty'>No items in the cart</p>);
 
+  const getTotalInfo = () => {
+    let totalItems = 0;
+    let totalPrice = 0;
+
+    for (let i = 0; i < itemsInCart.length; i++) {
+      totalItems += itemsInCart[i].quantity;
+      totalPrice += (itemsInCart[i].quantity * itemsInCart[i].price);
+    }
+
+    return {
+      totalItems,
+      totalPrice,
+    }
+  }
+
+  const totalInfo = getTotalInfo();
+
   return (
     <section className="checkout">
       <div className="checkout__table-header">
@@ -34,7 +51,7 @@ const Checkout = () => {
         {tableContent}
       </div>
       <div className="checkout__table-footer">
-        <p className='checkout__total-text'>Total: 2 x $19.20</p>
+        <p className='checkout__total-text'>Total: {totalInfo.totalItems} x ${totalInfo.totalPrice.toFixed(2)}</p>
       </div>
       <div className="checkout__buttons">
         <div className="checkout__button-wrapper">
