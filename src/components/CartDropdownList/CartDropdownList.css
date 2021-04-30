@@ -1,5 +1,4 @@
 .cartDropdownList__list {
-  /* background-color: springgreen; */
   margin-bottom: 4rem;
 }
 
@@ -7,8 +6,6 @@
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
-  /* font-size: 1.4rem; */
-
 }
 
 .cartDropdownList__checkout-btn {
@@ -21,7 +18,7 @@
   font-size: 1.4rem;
   font-weight: bold;
   letter-spacing: 1px;
-  border-radius: 5rem;
+  /* border-radius: 5rem; */
   cursor: pointer;
   margin-top: 1rem;
 }

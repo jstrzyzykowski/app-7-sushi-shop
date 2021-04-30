@@ -13,12 +13,8 @@ const CartItem = ({cartItem}) => {
     if(name === 'minus') dispatch(removeFromCart(cartItem));
   }
 
-  const handleRemove = () => {
-    dispatch(removeFromCart(cartItem, cartItem.quantity));
-  }
-
+  const handleRemove = () => dispatch(removeFromCart(cartItem, cartItem.quantity));
   const isDisabled = cartItem.quantity === 1 ? true : false;
-
 
   return (
     <div className="cartItem">

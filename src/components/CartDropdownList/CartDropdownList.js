@@ -12,7 +12,8 @@ const CartDropdownList = ({dropdownToggler}) => {
 
   const handleClick = () => {
     dropdownToggler();
-    history.push('/shop/checkout/checkorders');
+    const location = { pathname: '/shop/checkout/checkorders' };
+    history.push(location);
   }
 
   const items = itemsInCart.map((item) => <CartDropdownItem key={item.id} item={item}/>);
@@ -20,7 +21,7 @@ const CartDropdownList = ({dropdownToggler}) => {
   const getTotalInfo = () => {
     let totalItems = 0;
     let totalPrice = 0;
-
+    
     for (let i = 0; i < itemsInCart.length; i++) {
       totalItems += itemsInCart[i].quantity;
       totalPrice += (itemsInCart[i].quantity * itemsInCart[i].price);

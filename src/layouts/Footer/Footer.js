@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer__box">
-            <i className="fas fa-truck"></i>
+            <i className="fas fa-tools"></i>
             <div className="footer__box-text">
               <p className='footer__text-name'>
                 Money back guaranteed
@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer__box">
-            <i className="fas fa-truck"></i>
+            <i className="fas fa-hand-holding-usd"></i>
             <div className="footer__box-text">
               <p className='footer__text-name'>
                 Money back guaranteed
@@ -45,7 +45,7 @@ const Footer = () => {
       <div className="footer__copy">
         <div className="footer__copy-container">
           <p className='footer__copy-text'>
-            Copyrights &copy; MateStore 2019 All Rights Reserved
+            Copyrights &copy; <span>SasoriSushi</span> 2021 All Rights Reserved
           </p>
           <div className="footer__payments">
             <i className="fab fa-cc-visa"></i>

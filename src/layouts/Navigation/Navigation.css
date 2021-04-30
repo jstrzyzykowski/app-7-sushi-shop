@@ -1,10 +1,15 @@
 .navbar {
-  background-color: indianred;
+  /* background-color: indianred; */
+  /* background-color: whitesmoke; */
+  /* border-radius: 4px; */
   display: flex;
   padding: 1rem 2rem;
   max-width: var(--max-width);
   margin: 0 auto;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
+  color: whitesmoke;
+  position: relative;
+  z-index: 1;
 }
 
 .navbar__left {
@@ -12,38 +17,68 @@
 }
 
 .navbar__logo-wrapper {
-  background-color: chocolate;
-
+  /* background-color: rgba(80, 80, 80, 0.356); */
+  /* padding: 1rem; */
 }
 
 .navbar__logo {
   text-decoration: none;
   font-size: 2.8rem;
   font-weight: 900;
-  color: black;
+  /* color: black; */
+  color: whitesmoke;
 }
 
 .navbar__logo span {
-  color: red;
+  color: #F84E47;
+}
+
+.navbar__logo span i {
+  padding: 0 0.2rem;
 }
 
 .navbar__text-wrapper {
-  background-color: cornflowerblue;
+  /* background-color: rgb(80, 80, 80); */
   padding-top: 0.5rem;
+  /* padding: 0.5rem 1rem; */
+}
+
+.navbar__text {
+  letter-spacing: 2px;
 }
 
 .navbar__right {
-  background-color: cadetblue;
+  /* background-color: #F84E47; */
   position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: tomato; */
+  /* padding-right: 1.4rem; */
 }
+
+/* .navbar__right::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 100%;
+  background-color: red;
+  transform: skewX(-45deg) translateX(-50%);
+} */
 
 .navbar__cart {
   display: flex;
+  /* justify-content: flex-end; */
   align-items: center;
   position: relative;
-  background-color: khaki;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  /* border-radius: 0.4rem; */
   padding-right: 1.5rem;
   height: 100%;
+  /* width: 20rem; */
   cursor: pointer;
 }
 
@@ -58,12 +93,13 @@
   background-color: transparent;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid black;
+  border-top: 5px solid whitesmoke;
 }
 
 .navbar__cart-items-number {
   font-size: 1.8rem;
   margin-right: 1rem;
+  font-weight: 700;
 }
 
 .navbar__cart i {

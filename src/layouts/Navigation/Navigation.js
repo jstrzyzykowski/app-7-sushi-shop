@@ -15,10 +15,7 @@ const Navigation = () => {
   
   const getItemsInCartNumber = () => {
     let number = 0;
-
-    for (let i = 0; i < itemsInCart.length; i++) {
-      number += itemsInCart[i].quantity;
-    }
+    for (let i = 0; i < itemsInCart.length; i++) number += itemsInCart[i].quantity;
 
     return number
   }
@@ -29,7 +26,13 @@ const Navigation = () => {
     <nav className='navbar'>
         <div className="navbar__left">
           <div className="navbar__logo-wrapper">
-            <Link to='/' className='navbar__logo'>Item<span>Shop</span></Link>
+            <Link to='/' className='navbar__logo'>
+              <span>
+                Sasori
+                <i className="fas fa-bacon"></i>
+              </span>
+              Sushi
+            </Link>
           </div>
           <div className="navbar__text-wrapper">
             <p className='navbar__text'>Lorem ipsum dolor sit</p>

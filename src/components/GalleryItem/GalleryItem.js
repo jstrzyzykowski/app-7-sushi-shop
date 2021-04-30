@@ -49,11 +49,18 @@ const GalleryItem = ({item}) => {
       </div>
       <div className="gallery__image-wrapper">
         <img src={item.src} alt="" className='galleryItem__image'/>
+        <div className='galleryItem__footer'>
+          <p className='galleryItem__price'>${item.price}</p>
+          <button className='galleryItem__addToCart-btn' onClick={handleAddToCartClick}>
+            <i className="fas fa-plus"></i>
+            <p className='galleryItem__addToCart-btn-text'>Cart</p>
+          </button>
+        </div>
       </div>
-      <div className='galleryItem__footer'>
+      {/* <div className='galleryItem__footer'>
         <p className='galleryItem__price'>${item.price}</p>
         <button className='galleryItem__addToCart-btn' onClick={handleAddToCartClick}>+ Cart</button>
-      </div>
+      </div> */}
     </li>
   );
 }

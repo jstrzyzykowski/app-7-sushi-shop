@@ -4,7 +4,7 @@ import GalleryList from '../../components/GalleryList/GalleryList';
 import './Home.css';
 
 const CATEGORIES = {
-  ALL_CATEGORIES: 'all_categories',
+  ALL_CATEGORIES: 'all categories',
   BOXES: 'boxes',
   VEGETABLES: 'vegetables',
   FRUITS: 'fruits',
@@ -15,9 +15,7 @@ const Home = () => {
 
   const [category, setCategory] = useState(CATEGORIES.ALL_CATEGORIES);
 
-  const handleClick = (categoryValue) => {
-    setCategory(categoryValue);
-  }
+  const handleClick = (categoryValue) => setCategory(categoryValue);
 
   const categoriesComponents = Object.keys(CATEGORIES).map((categoryKey, index) => {
   const categoryValue = CATEGORIES[categoryKey];

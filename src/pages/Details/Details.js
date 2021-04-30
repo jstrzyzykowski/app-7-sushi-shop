@@ -1,25 +1,29 @@
 import React from 'react';
 import {Link, useParams} from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
 import './Details.css';
 
-// !DEBUG
-import images from '../../assets/images/items/index';
-
 const Details = () => {
   const { productId } = useParams();
+  const items = useSelector((store) => store.items.data);
+
+  const currentItem = items.filter((item) => {
+    if(item.id === parseInt(productId)) return item;
+  })[0];
+  console.log(currentItem);
 
   return (
     <section className='details'>
       <div className="details__wrapper">
         <div className="details__image-wrapper">
-          <img src={images.img_1} alt="" className='details__image'/>
+          <img src={currentItem.src} alt="" className='details__image'/>
         </div>
         <div className="details__text-wrapper">
-          <p className='details__productName'>Product - {productId}</p>
-          <p className='details__productPrice'>$Hello Lorem</p>
+          <p className='details__productName'>{currentItem.name}</p>
+          <p className='details__productPrice'>${currentItem.price}</p>
           <p className='details__productDesc'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae numquam porro minus dolores quia excepturi veniam nulla, maiores minima delectus tempora unde perferendis placeat doloribus tempore consectetur incidunt dolorum sed?</p>
-          <p className='details__productImportInfo'>Imported: NO</p>
+          <p className='details__productImportInfo'>Imported: <span>NO</span></p>
           <hr className='details__divider'/>
           <div className="details__socials">
             <Link to='/' className='details__link facebook'>

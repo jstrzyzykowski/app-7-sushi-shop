@@ -9,7 +9,8 @@ const GalleryList = ({category}) => {
   const items = useSelector((store) => store.items.data);
 
   const itemComponents = items.map((item) => {
-    if(category === 'all_categories' || category === item.category) return <GalleryItem key={item.id} item={item}/>;
+    if(category === 'all categories' || category === item.category) return <GalleryItem key={item.id} item={item}/>;
+    return null;
   });
 
   return (

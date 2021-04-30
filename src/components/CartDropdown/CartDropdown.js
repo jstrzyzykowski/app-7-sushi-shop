@@ -11,10 +11,10 @@ const CartDropdown = ({callback}) => {
   const dropdownContent = itemsInCart.length > 0 
   ? <CartDropdownList dropdownToggler={callback}/> 
   : (
-    <>
-      <p>Your shopping bag is empty.</p>
-      <p>Start shopping.</p>
-    </>
+    <div className='cartDropdown__empty-box'>
+      <i className="fas fa-box-open"></i>
+      <p className='cartDropdown__empty-box-text'>Your shopping bag is empty</p>
+    </div>
   );
 
   return (

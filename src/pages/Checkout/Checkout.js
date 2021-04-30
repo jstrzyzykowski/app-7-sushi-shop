@@ -13,9 +13,7 @@ const Checkout = () => {
   const itemsInCart = useSelector((store) => store.cart.data);
 
   const handleClick = () => {
-    const location = {
-      pathname: '/shop'
-    }
+    const location = { pathname: '/shop' };
     history.push(location);
   };
 
@@ -23,7 +21,12 @@ const Checkout = () => {
   const cartItemComponents = itemsInCart.map((cartItem) => <CartItem key={cartItem.id} cartItem={cartItem}/>);
   const tableContent = itemsInCart.length > 0 
   ? cartItemComponents 
-  : (<p className='checkout__content-text-empty'>No items in the cart</p>);
+  : (
+    <div className="checkout__content-empty-wrapper">
+      <i class="fas fa-box-open"></i>
+      <p className='checkout__content-empty-text'>No items in the cart</p>
+    </div>
+  );
 
   const getTotalInfo = () => {
     let totalItems = 0;
@@ -51,7 +54,7 @@ const Checkout = () => {
         {tableContent}
       </div>
       <div className="checkout__table-footer">
-        <p className='checkout__total-text'>Total: {totalInfo.totalItems} x ${totalInfo.totalPrice.toFixed(2)}</p>
+        <p className='checkout__total-text'>Total: {totalInfo.totalItems} x <span>${totalInfo.totalPrice.toFixed(2)}</span></p>
       </div>
       <div className="checkout__buttons">
         <div className="checkout__button-wrapper">

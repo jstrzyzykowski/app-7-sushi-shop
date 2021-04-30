@@ -1,6 +1,8 @@
 .footer {
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 /* --------------------*/
@@ -9,14 +11,16 @@
 
 .footer__boxes {
   background-color: gray;
-  height: 12rem;
+  /* height: 12rem; */
 }
 
 .footer__boxes-container {
   display: flex;
   max-width: var(--max-width);
   margin: 0 auto;
-  height: 100%;
+  /* height: 100%; */
+  padding: 4rem 0;
+  /* background-color: royalblue; */
 }
 
 .footer__box {
@@ -25,6 +29,8 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  color: #212121;
+  /* background-color: rgba(0, 0, 0, 0.2); */
 }
 
 .footer__box i {
@@ -32,6 +38,8 @@
   transform: scaleX(-1);
   margin-right: 2rem;
   padding-top: 2.8rem;
+  /* color: whitesmoke; */
+  color: #212121;
 }
 
 .footer__text-name {
@@ -49,6 +57,10 @@
 /*      Copyright      */
 /* ------------------- */
 
+.footer__copy {
+  background-color: whitesmoke;
+}
+
 .footer__copy-container {
   display: flex;
   justify-content: space-between;
@@ -62,9 +74,15 @@
 .footer__copy-text {
   flex-grow: 1;
   font-size: 1.4rem;
+  color: #212121;
+}
+
+.footer__copy-text span {
+  font-weight: 700;
 }
 
 .footer__payments i {
   font-size: 3.6rem;
   margin-right: 1rem;
+  color: #212121;
 }

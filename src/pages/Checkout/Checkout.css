@@ -1,9 +1,11 @@
 .checkout {
   min-height: 100vh;
-  background-color: steelblue;
+  /* background-color: steelblue; */
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2rem;
+  padding: 7rem 0;
+  position: relative;
+  z-index: 0;
 }
 
 .checkout__table-header {
@@ -24,29 +26,53 @@
 }
 
 .checkout__table-content {
-  /* padding: 4rem 3rem; */
+  /* Styles */
+  /* background-color: rgba(255, 255, 255, 0.4); */
+  background-color: gray;
+  /* background-color: whitesmoke; */
 }
 
-.checkout__content-text-empty {
+.checkout__content-empty-wrapper {
   width: 100%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.checkout__content-empty-wrapper i {
+  font-size: 4.4rem;
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.checkout__content-empty-text {
+  /* width: 100%; */
+  /* text-align: center; */
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 700;
   color: rgba(0, 0, 0, 0.6);
   letter-spacing: 1px;
-  padding: 4rem 0;
 }
 
 .checkout__table-footer {
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
   padding: 1.4rem 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .checkout__total-text {
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 1.8rem;
-  /* background-color: violet; */
   text-align: end;
+  color: whitesmoke;
+  letter-spacing: 1px;
+}
+
+.checkout__total-text span {
+  font-weight: 700;
+  color: #F84E47;
 }
 
 .checkout__buttons {
@@ -57,15 +83,12 @@
 .checkout__button-continue {
   padding: 1.3rem 3rem;
   border: none;
-  background-color: #212121;
-  color: whitesmoke;
+  background-color: whitesmoke;
+  color: #212121;
   font-size: 1.6rem;
   font-weight: bold;
   letter-spacing: 1px;
-  border-radius: 5rem;
+  /* border-radius: 0.5rem; */
   cursor: pointer;
   margin-top: 2rem;
 }
-
-
-
