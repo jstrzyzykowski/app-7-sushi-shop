@@ -2,15 +2,10 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  /* width: 35rem; */
-  /* min-width: 40rem; */
   transform: translateY(100%);
   background-color: whitesmoke;
-  /* box-shadow: 0 0 2px 0 black; */
   padding: 3rem;
-  /* border-radius: 0.4rem; */
   animation: slideVertical .1s ease-out both;
-  /* z-index: 100; */
   color: #212121;
 }
 

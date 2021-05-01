@@ -1,6 +1,5 @@
 .notFound {
   min-height: 100vh;
-  /* background-color: cyan; */
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;

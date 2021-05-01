@@ -1,5 +1,4 @@
 .galleryList {
-  /* background-color: tomato; */
   min-height: 100vh;
 }
 
@@ -7,6 +6,5 @@
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* padding: 1rem; */
   gap: 1rem;
 }

@@ -23,7 +23,7 @@ const Details = () => {
           <p className='details__productName'>{currentItem.name}</p>
           <p className='details__productPrice'>${currentItem.price}</p>
           <p className='details__productDesc'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae numquam porro minus dolores quia excepturi veniam nulla, maiores minima delectus tempora unde perferendis placeat doloribus tempore consectetur incidunt dolorum sed?</p>
-          <p className='details__productImportInfo'>Imported: <span>NO</span></p>
+          <p className='details__productImportInfo'>Imported: <span>no</span></p>
           <hr className='details__divider'/>
           <div className="details__socials">
             <Link to='/' className='details__link facebook'>

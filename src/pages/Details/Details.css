@@ -1,7 +1,6 @@
 .details {
   max-width: var(--max-width);
   margin: 0 auto;
-  /* background-color: slateblue; */
   min-height: 100vh;
   padding: 2rem;
   position: relative;
@@ -20,7 +19,6 @@
 .details__image-wrapper {
   height: 100%;
   width: 40%;
-  /* background-color: yellowgreen; */
 }
 
 .details__image {
@@ -55,16 +53,12 @@
 
 .details__productImportInfo span {
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .details__divider {
   margin: 2rem 0;
   border-color: rgba(255, 255, 255, 0.4);
-}
-
-.details__socials {
-  /* Styles */
-  /* font-weight: 700; */
 }
 
 .details__link {

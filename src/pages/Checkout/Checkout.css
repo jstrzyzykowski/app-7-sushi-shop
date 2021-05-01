@@ -1,6 +1,5 @@
 .checkout {
   min-height: 100vh;
-  /* background-color: steelblue; */
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 7rem 0;
@@ -26,10 +25,7 @@
 }
 
 .checkout__table-content {
-  /* Styles */
-  /* background-color: rgba(255, 255, 255, 0.4); */
   background-color: gray;
-  /* background-color: whitesmoke; */
 }
 
 .checkout__content-empty-wrapper {
@@ -48,8 +44,6 @@
 }
 
 .checkout__content-empty-text {
-  /* width: 100%; */
-  /* text-align: center; */
   font-size: 2rem;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.6);
@@ -57,13 +51,11 @@
 }
 
 .checkout__table-footer {
-  /* background-color: yellowgreen; */
   padding: 1.4rem 2rem;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 .checkout__total-text {
-  /* font-weight: bold; */
   font-size: 1.8rem;
   text-align: end;
   color: whitesmoke;
@@ -88,7 +80,6 @@
   font-size: 1.6rem;
   font-weight: bold;
   letter-spacing: 1px;
-  /* border-radius: 0.5rem; */
   cursor: pointer;
   margin-top: 2rem;
 }

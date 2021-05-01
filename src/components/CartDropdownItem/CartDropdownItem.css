@@ -1,8 +1,6 @@
 .cartDropdownItem {
   display: grid;
   grid-template-columns: 1.5fr 3fr 1fr;
-  /* background-color: gray; */
-  /* border: 1px solid rgba(0, 0, 0, 0.2); */
   background-color: rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
 }
@@ -26,7 +24,6 @@
 
 .cartDropdownItem__remove-wrapper i {
   font-size: 2.6rem;
-  /* background-color: springgreen; */
   padding: 1rem;
   cursor: pointer;
 }
@@ -34,9 +31,7 @@
 .cartDropdownItem__text-wrapper {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   padding: 0 1rem;
-  /* background-color: wheat; */
 }
 
 .cartDropdownItem__name {
