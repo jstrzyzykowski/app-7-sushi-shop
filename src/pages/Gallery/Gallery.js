@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import GalleryList from '../../components/GalleryList/GalleryList';
 
-import './Home.css';
+import './Gallery.css';
 
 const CATEGORIES = {
   ALL_CATEGORIES: 'all categories',
@@ -11,7 +11,7 @@ const CATEGORIES = {
   SEEDS: 'seeds',
 }
 
-const Home = () => {
+const Gallery = () => {
 
   const [category, setCategory] = useState(CATEGORIES.ALL_CATEGORIES);
 
@@ -40,4 +40,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default Gallery;

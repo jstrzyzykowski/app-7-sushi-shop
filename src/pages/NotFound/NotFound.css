@@ -20,6 +20,7 @@
 .notFound__desc {
   font-size: 2.6rem;
   font-weight: 200;
+  text-align: center;
 }
 
 .notFound__back-btn {
@@ -33,4 +34,18 @@
   letter-spacing: 1px;
   color: #212121;
   background-color: rgb(233, 233, 233);
+}
+
+/* ----------------- */
+/*   Media Queries   */
+/* ----------------- */
+
+@media screen and (max-width: 576px) {
+  .notFound__codeNumber {
+    font-size: 12rem;
+  }
+
+  .notFound__desc {
+    font-size: 2rem;
+  }
 }

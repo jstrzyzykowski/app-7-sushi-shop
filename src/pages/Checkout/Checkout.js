@@ -58,7 +58,7 @@ const Checkout = () => {
       </div>
       <div className="checkout__buttons">
         <div className="checkout__button-wrapper">
-          <button onClick={handleClick} className='checkout__button-continue'>Continue Shopping</button>
+          <button onClick={handleClick} className='checkout__button-continue'>Return</button>
         </div>
       </div>
     </section>

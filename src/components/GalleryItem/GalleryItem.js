@@ -50,7 +50,7 @@ const GalleryItem = ({item}) => {
       <div className="gallery__image-wrapper">
         <img src={item.src} alt="" className='galleryItem__image'/>
         <div className='galleryItem__footer'>
-          <p className='galleryItem__price'>${item.price}</p>
+          <p className='galleryItem__price'>${item.price.toFixed(2)}</p>
           <button className='galleryItem__addToCart-btn' onClick={handleAddToCartClick}>
             <i className="fas fa-plus"></i>
             <p className='galleryItem__addToCart-btn-text'>Cart</p>

@@ -31,3 +31,33 @@
   width: 100%;
   opacity: 0.8;
 }
+
+/* ----------------- */
+/*   Media Queries   */
+/* ----------------- */
+
+@media screen and (max-width: 1024px) {
+  .app::after {
+    height: 9rem;
+  }
+
+  .app::before {
+    top: 9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app::before {
+    background-position: 40% center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .app::after {
+    height: 8rem;
+  }
+
+  .app::before {
+    top: 8rem;
+  }
+}

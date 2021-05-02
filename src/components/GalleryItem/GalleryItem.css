@@ -28,15 +28,18 @@
   height: 4.4rem;
   width: 4.4rem;
   border-radius: 5rem;
-  font-size: 2rem;
   position: absolute;
   top: 0;
   right: 0;
   transform: translate(-30%, 20%);
-  color: whitesmoke;
   background-color: rgba(0, 0, 0,0.6);
   animation: slideToRight 0.15s 0.2s ease-out both;
   opacity: 0;
+}
+
+.galleryItem__overlay-details-link i {
+  font-size: 2rem;
+  color: whitesmoke;
 }
 
 .galleryItem__overlay-footer {
@@ -143,7 +146,7 @@
 }
 
 .galleryItem__addToCart-btn i {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-right: 0.4rem;
   padding-bottom: 0.2rem;
 }
@@ -192,5 +195,57 @@
   to {
     right: 0;
     opacity: 1;
+  }
+}
+
+/* ----------------- */
+/*   Media Queries   */
+/* ----------------- */
+
+@media screen and (max-width: 1200px) {
+  .galleryItem {
+    margin: 1rem;
+    height: 22rem;
+  }
+
+  .galleryItem__addToCart-btn {
+    font-size: 1.4rem;
+  }
+
+  .galleryItem__addToCart-btn i {
+    font-size: 1.1rem;
+  }
+  
+  .galleryItem__overlay-desc {
+    font-size: 1.6rem;
+  }
+
+  .galleryItem__overlay-details-link {
+    height: 4rem;
+    width: 4rem;
+    transform: translate(-40%, 30%);
+  }
+
+  .galleryItem__overlay-details-link i {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .galleryItem {
+    margin: 0;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .galleryItem {
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .galleryItem {
+    margin: 0;
   }
 }

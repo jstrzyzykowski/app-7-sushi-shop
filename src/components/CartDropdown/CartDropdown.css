@@ -4,9 +4,10 @@
   right: 0;
   transform: translateY(100%);
   background-color: whitesmoke;
-  padding: 3rem;
+  padding: 3rem 2rem 3rem 3rem;
   animation: slideVertical .1s ease-out both;
   color: #212121;
+  
 }
 
 .cartDropdown__empty-box {
@@ -36,5 +37,15 @@
 
   to {
     bottom: -10px;
+  }
+}
+
+/* ----------------- */
+/*   Media Queries   */
+/* ----------------- */
+
+@media screen and (max-width: 768px) {
+  .cartDropdown {
+    padding: 2rem 1rem 2rem 2rem;
   }
 }

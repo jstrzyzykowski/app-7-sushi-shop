@@ -25,7 +25,7 @@ const CartItem = ({cartItem}) => {
         <p className='cartItem__product'>{cartItem.name}</p>
       </div>
       <div className="cartItem__price-wrapper">
-        <p className='cartItem__price'>${cartItem.price}</p>
+        <p className='cartItem__price'>${cartItem.price.toFixed(2)}</p>
       </div>
       <div className="cartItem__quantity-wrapper">
         <div className="cartItem__quantity-button-wrapper">

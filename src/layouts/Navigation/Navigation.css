@@ -37,7 +37,6 @@
 
 .navbar__right {
   position: relative;
-  width: 50%;
   display: flex;
   justify-content: flex-end;
 }
@@ -73,4 +72,64 @@
 
 .navbar__cart i {
   font-size: 2.4rem;
+}
+
+/* ----------------- */
+/*   Media Queries   */
+/* ----------------- */
+
+@media screen and (max-width: 1200px) {
+  .navbar {
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    max-width: 100%;
+    padding: 1rem 4rem;
+  }
+
+  .navbar__logo {
+    font-size: 2.4rem;
+  }
+  
+  .navbar__text-wrapper {
+    padding-top: 0.3rem;
+  }
+  
+  .navbar__text {
+    font-size: 1.4rem;
+  }
+
+  .navbar__cart {
+    padding-right: 1.8rem;
+  }
+
+  .navbar__cart-items-number {
+    font-size: 1.6rem;
+  }
+  
+  .navbar__cart i {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar {
+    max-width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .navbar__logo {
+    font-size: 2.2rem;
+  }
+  
+  .navbar__text-wrapper {
+    padding-top: 0;
+  }
+  
+  .navbar__text {
+    font-size: 1.2rem;
+  }
 }

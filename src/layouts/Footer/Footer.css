@@ -37,6 +37,11 @@
   color: #212121;
 }
 
+.footer__box-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer__text-name {
   text-transform: uppercase;
   font-weight: bold;
@@ -80,4 +85,137 @@
   font-size: 3.6rem;
   margin-right: 1rem;
   color: #212121;
+}
+
+/* ----------------- */
+/*   Media Queries   */
+/* ----------------- */
+
+@media screen and (max-width: 1200px) {
+  .footer__boxes-container {
+    max-width: 960px;
+    padding: 3.4rem 1rem;
+  }
+
+  .footer__box i {
+    font-size: 3.4rem;
+  }
+  
+  .footer__text-desc {
+    margin-top: 0.5rem;
+  }
+
+  .footer__copy-container {
+    max-width: 960px;
+    padding: 0.8rem 1rem;
+  }
+
+  .footer__payments i {
+    font-size: 3.4rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer__boxes-container {
+    max-width: 100%;
+    padding: 3rem 4rem;
+  }
+
+  .footer__box {
+    flex-direction: column;
+  }
+
+  .footer__box i {
+    margin-bottom: 2rem;
+    margin-right: 0;
+    padding-top: 0;
+  }
+
+  .footer__text-name {
+    text-align: center;
+  }
+  
+  .footer__text-desc {
+    font-size: 1.2rem;
+    margin-top: 0.4rem;
+    text-align: center;
+  }
+
+  .footer__copy-container {
+    max-width: 100%;
+    padding: 0.8rem 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__boxes-container {
+    flex-direction: column;
+  }
+
+  .footer__box {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .footer__box i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    font-size: 3.6rem;
+    margin: 0 0 1rem;
+  }
+
+  .footer__text-name {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .footer__text-desc {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .footer__copy-container {
+    flex-direction: column-reverse;
+  }
+
+  .footer__payments i {
+    font-size: 3.4rem;
+    margin: 0.5rem;
+  }
+
+  .footer__copy-text {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer__boxes-container {
+    padding: 3rem 2rem;
+  }
+
+  .footer__box i {
+    width: auto;
+  }
+
+  .footer__text-name {
+    font-size: 1.4rem;
+  }
+  
+  .footer__text-desc {
+    font-size: 1.2rem;
+  }
+
+  .footer__payments i {
+    font-size: 3.2rem;
+    margin: 0.5rem;
+  }
+
+  .footer__copy-text {
+    font-size: 1.2rem;
+  }
 }

@@ -37,7 +37,7 @@ const CartDropdownList = ({dropdownToggler}) => {
 
   return (
     <>
-      <ul className='cartDropdownList__list'>
+      <ul className='cartDropdownList__list' id='custom-scroll'>
         {items}
       </ul>
       <p className='cartDropdownList__total'>Total: {totalInfo.totalItems} | ${totalInfo.totalPrice.toFixed(2)}</p>

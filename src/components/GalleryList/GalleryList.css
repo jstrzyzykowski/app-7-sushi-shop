@@ -1,5 +1,8 @@
 .galleryList {
   min-height: 100vh;
+  /* max-height: 100vh; */
+  /* overflow-y: scroll; */
+  padding-bottom: 4rem;
 }
 
 .galleryList__list {
@@ -7,4 +10,29 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+}
+
+/* ----------------- */
+/*   Media Queries   */
+/* ----------------- */
+
+@media screen and (max-width: 1024px) {
+  /* Styles */
+  .galleryList__list {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .galleryList__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .galleryList__list {
+    /* grid-template-columns: repeat(1, 50rem); */
+    /* grid-template-columns: repeat(2, 1fr); */
+  }
 }

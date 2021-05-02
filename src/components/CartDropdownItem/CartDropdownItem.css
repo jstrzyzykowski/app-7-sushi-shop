@@ -43,3 +43,21 @@
 .cartDropdownItem__desc {
   font-size: 1.5rem;
 }
+
+/* ----------------- */
+/*   Media Queries   */
+/* ----------------- */
+
+@media screen and (max-width: 1024px) {
+  .cartDropdownItem__name {
+    font-size: 1.5rem;
+  }
+
+  .cartDropdownItem__desc {
+    font-size: 1.4rem;
+  }
+
+  .cartDropdownItem__remove-wrapper i {
+    font-size: 2.4rem;
+  }
+}

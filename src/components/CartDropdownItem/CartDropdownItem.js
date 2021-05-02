@@ -18,7 +18,7 @@ const CartDropdownItem = ({item}) => {
       </div>
       <div className="cartDropdownItem__text-wrapper">
         <p className='cartDropdownItem__name'>{item.name}</p>
-        <p className='cartDropdownItem__desc'>{item.quantity} x ${item.price}</p>
+        <p className='cartDropdownItem__desc'>{item.quantity} x ${item.price.toFixed(2)}</p>
       </div>
       <div className="cartDropdownItem__remove-wrapper">
         <i className="fas fa-trash-alt" onClick={handleRemove}></i>
