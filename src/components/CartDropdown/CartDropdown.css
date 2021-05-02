@@ -7,7 +7,7 @@
   padding: 3rem 2rem 3rem 3rem;
   animation: slideVertical .1s ease-out both;
   color: #212121;
-  
+  width: 35rem;
 }
 
 .cartDropdown__empty-box {
@@ -47,5 +47,11 @@
 @media screen and (max-width: 768px) {
   .cartDropdown {
     padding: 2rem 1rem 2rem 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cartDropdown {
+    width: auto;
   }
 }

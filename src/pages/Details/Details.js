@@ -11,7 +11,6 @@ const Details = () => {
   const currentItem = items.filter((item) => {
     if(item.id === parseInt(productId)) return item;
   })[0];
-  console.log(currentItem);
 
   return (
     <section className='details'>
